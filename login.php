@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Registration system PHP and MySQL</title>
+	<title>Registration</title>
 	<link rel="title icon" type="image/png" href="images/title-img.png"/>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,22 +12,22 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 	<style>
-		
-			
+
+
 	*{
 	margin: 0px;
 	padding: 0px;
 }
 body {
 
-		
+
 		background-size : cover;
 		background-position : center;
 		background-repeat: no-repeat;
 		height : 100vh;
 		width : 100vw;
 		font-size: 120%;
-	
+
 }
 .form-container {
 	position : relative;
@@ -53,7 +53,7 @@ form, .content {
 	border: 1px solid #B0C4DE;
 	background: white;
 	border-radius: 0px 0px 10px 10px;
-	
+
 }
 
 /*Style to input details in form*/
@@ -86,39 +86,39 @@ form, .content {
 	border-radius: 5px;
 }
 .error {
-	width: 92%; 
-	margin: 0px auto; 
-	padding: 10px; 
-	border: 1px solid #a94442; 
-	color: #a94442; 
-	background: #f2dede; 
-	border-radius: 5px; 
+	width: 92%;
+	margin: 0px auto;
+	padding: 10px;
+	border: 1px solid #a94442;
+	color: #a94442;
+	background: #f2dede;
+	border-radius: 5px;
 	text-align: left;
 }
 .success {
-	color: #3c763d; 
-	background: #dff0d8; 
+	color: #3c763d;
+	background: #dff0d8;
 	border: 1px solid #3c763d;
 	margin-bottom: 20px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
 
 .ds{
-	background-color: #00222f; 
+	background-color: #00222f;
 	color: #b9b9b9;
 }
 
 
 /*Footer style*/
-footer { 
-  background: #00222f; 
+footer {
+  background: #00222f;
  }
 
  /*Paragraph style*/
@@ -140,7 +140,7 @@ a.ack:hover{
 }
 
 
-/*Link of login page*/ 
+/*Link of login page*/
 a.link_col:hover{
 	color:red;
 }
@@ -151,13 +151,13 @@ hr.line{
 }
 
 /*Color to h2*/
-h2 > .detail { 
+h2 > .detail {
 	color:#29b5ee;
 	font-weight:bold;
 	font-family:Calibri;
 	font-size:20;
  }
-h2 > .name { 
+h2 > .name {
 	color: #fff;
 	font-weight:bold;
 	font-family:Calibri;
@@ -197,43 +197,43 @@ span.hello {
      transition: 0.5s;
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
-  -o-transition: 0.5s; 
+  -o-transition: 0.5s;
 }
 
 	</style>
-		
+
 </head>
 <body>
 <?php include('amaterasu.php')?>
 <div class="form-container col-12 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-4 offset-xl-4">
-		
+
 		<div class="header" >
 			<h2>User Login</h2>
 		</div>
 		<form method="post" action="login.php">
 		    <?php include('errors.php'); ?>
-			
+
 			<div class="input-group ">
 				<label>Username</label>
 				<input type="text" name="username" required>
 			</div>
-			
+
 			<div class="input-group">
 				<label>Password</label>
 				<input type="password" name="password" required>
 			</div>
-			
+
 			<div class="input-group ">
 				<button type="submit" id="btn1" class="btn" name="login_user" onnclick="myfunc()">Login</button>
 			</div>
 			<p>
 				Not yet a member? <a href="register.php">Sign up</a>
-				
+
 			</p>
 			<p>
 			<a class="link_col" href="cngpass1.php">Change Password</a>
 		</p>
-			
+
 		</form>
 		</div>
 	<button onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-up"></i></button>
