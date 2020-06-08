@@ -8,10 +8,6 @@ Adhaar-Linked Email is necessary for authentication and Viewing Voter-Id
 
 
 
-Any Need Please Contact Me!!
-
-
-
 
 
 THANK YOU!
