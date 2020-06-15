@@ -8,7 +8,7 @@
 	$_SESSION['success'] = "";
 
 	// connect to database
-	$db = mysqli_connect('127.0.0.1:49489', 'azure', '6#vWHD_$', 'register');
+	$db = mysqli_connect('127.0.0.1:50131', 'azure', '6#vWHD_$', 'register');
 
 	// REGISTER USER
 	if (isset($_POST['reg_user']))
@@ -31,12 +31,12 @@
 		// register user if there are no errors in the form
 		if (count($errors) == 0)
 		{
-			$password = md5($password_1);
-			$username = md5($username);
+			$uname = md5($username);
 			$encryption_iv = '1234567891011121';
-			$encryption = openssl_encrypt($email,"AES-128-CBC","param_encr", 0, $encryption_iv);//encrypt the password before saving in the database
+			$email_encryption = openssl_encrypt($email, "AES-128-CBC","param_encryption", 0, $encryption_iv);
+			$password_encryption = openssl_encrypt($password_1, "AES-128-CBC","param_encryption", 0, $encryption_iv);//encrypt the password before saving in the database
 			$query = "INSERT INTO users (username, email, password)
-					  VALUES('$username', '$encryption', '$password')";
+					  VALUES('$uname', '$email_encryption', '$password_encryption')";
 			mysqli_query($db, $query);
 
 			//$_SESSION['username'] = $username;
@@ -68,9 +68,10 @@
 
 		if (count($errors) == 0)
 		{
-			$password = md5($password);
+			$encryption_iv = '1234567891011121';
+			$pass_encryption = openssl_encrypt($password, "AES-128-CBC","param_encryption", 0, $encryption_iv);
 			$username4 = md5($username3);
-			$query = "SELECT * FROM users WHERE username='$username4' AND password='$password'";
+			$query = "SELECT * FROM users WHERE username='$username4' AND password='$pass_encryption'";
 			$results = mysqli_query($db, $query);
 
 
@@ -189,7 +190,7 @@
 
 if (isset($_POST['cem_user']))
 {
-	$db1 = mysqli_connect('127.0.0.1:49489', 'azure', '6#vWHD_$', 'adhaar');
+	$db1 = mysqli_connect('127.0.0.1:50131', 'azure', '6#vWHD_$', 'adhaar');
 	$emailid = mysqli_query($db1, "SELECT email FROM adhaardetail WHERE Adhaarno = '".$_SESSION['adharnumber']."'");
 	$mail = mysqli_fetch_array($emailid);
 
