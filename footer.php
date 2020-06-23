@@ -9,17 +9,17 @@
                 <h2><span class="detail"> Contact</span><span class="name"> Us</span></h2><br>
                 <p class="para_col">
                     For details of eligibility criteria or any other additional information related to electoral forms,
-                    kindly visit <a class = "ack" href="https://eci.gov.in"><b>https://eci.gov.in</b></a>
+                    kindly visit <a class = "ack" href="#"><b>https://ecci.in</b></a>
                 </p>
                 <p class="para_col">
                     For any other technical feedback or issues on the portal kindly send your feedback to
                     
-                    <a class="ack" href="mailto:ecitechsupport@eci.gov.in?Help Desk" target="_top">
-                        <b>ECI Technical Support</b>
+                    <a class="ack" href="mailto:xyz@gmail.com" target="_top">
+                        <b>Technical Support</b>
                     </a>
                 </p>
                 <div class="para_col"><i class="fas fa-phone"></i>
-                    Toll free Number :1800111950
+                    Toll free Number :1234567890
                 </div>
             </div>
             <!-- Grid column -->
@@ -29,13 +29,13 @@
                 <!-- Content -->
                 <h2><span class="detail"> Other</span><span class="name"> Links</span></h2><br>
                 <h5>
-                <a class="ack" href="http://results.eci.gov.in/" target="_blank">
-                    Election Commission of India
+                <a class="ack" href="#" target="_self">
+                    Election Commission
                 </a><br><br>
                 </h5>
                 <h5>
-                <a class="ack" href="#" target="_blank">
-                    Chief Electoral Officer
+                <a class="ack" href="#" target="_self">
+                    Chief Officer
                 </a>
                 </h5>
                 

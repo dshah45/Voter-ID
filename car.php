@@ -5,17 +5,17 @@
     <style>
       .carousel .carousel-item {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
 }
 
 .carousel .carousel-item:first-of-type {
-    background-image: url("img2.jpg");
+    background-image: url("img1.jpg");
 }
 
 .carousel .carousel-item:nth-of-type(2) {
-    background-image: url("1.jpg");
+    background-image: url("nvsp.jpg");
 }
 
 .carousel .carousel-item:last-of-type {

@@ -2,7 +2,7 @@
 $errors = array(); 
 $_SESSION['success'] = "";
   // connect to database
-$db = mysqli_connect('127.0.0.1:49489', 'azure', '6#vWHD_$', 'adhaar');
+$db = mysqli_connect('127.0.0.1:50131', 'azure', '6#vWHD_$', 'adhaar');
 ?>
 <?php
 //Added database connection
@@ -35,7 +35,7 @@ if(mysqli_num_rows($res))
 //Added your custom subject
     $mail->Subject = 'Voter-Id';
 //Added your custom body
-    $mail->Body    = '<h1>Congratulations! You are now Eligible for applying Voter-Id. Visit our portal e-voter.azurewebsites.net for your Voter-Id.</h1>';
+    $mail->Body    = '<h1>Congratulations! You are now Eligible for applying Voter-Id. Visit our portal https://voter-id.azurewebsites.net/ for your Voter-Id.</h1>';
     $mail->AltBody = 'This is for non-html content';
     if($mail->send())
     {   ?>

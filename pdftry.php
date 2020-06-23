@@ -1,19 +1,19 @@
 <?php session_start(); ?>
 <!--<?php //error_reporting(0); ?>-->
 <?php
-include('tcpdf/tcpdf.php'); 
+include('tcpdf/tcpdf.php');
   //$username = "";
   //$email    = "";
   //$textboxx = "";
   //$var = "";
-  $errors = array(); 
+  $errors = array();
   $_SESSION['success'] = "";
 ob_end_clean();
   // connect to database
-     $db = mysqli_connect('127.0.0.1:49489', 'azure', '6#vWHD_$', 'adhaar');
-      $result1 = mysqli_query($db,"SELECT * FROM adhaardetail WHERE Adhaarno = '".$_SESSION['varr']."' "); 
+     $db = mysqli_connect('127.0.0.1:50131', 'azure', '6#vWHD_$', 'adhaar');
+      $result1 = mysqli_query($db,"SELECT * FROM adhaardetail WHERE Adhaarno = '".$_SESSION['varr']."' ");
 	  $row=mysqli_fetch_array($result1);
-	  
+
 	  $name = $row['Name'];
 	  $fname = $row['Fname'];
 	  $gender = $row['Sex'];
@@ -39,22 +39,22 @@ $pdf->AddPage();
 
 $pdf->Rect(47, 40, 115, 165, 'D');
 $pdf->SetFont('freesans','',17);
-$pdf->Write(69, "भारत निर्वाचन आयोग", '', 0, 'C', true, 0, false, false, 0);
+$pdf->Write(69, "निर्वाचन आयोग", '', 0, 'C', true, 0, false, false, 0);
 $pdf->SetXY(3, 58);
 $pdf->SetFont('Helvetica','',12.5);
-$pdf->Write(10,"ELECTION COMMISSION OF INDIA", '', 0, 'C', true, 0, false, false, 0);
+$pdf->Write(10,"ELECTION COMMISSION", '', 0, 'C', true, 0, false, false, 0);
 //$pdf->Cell(30,75,"भारत निर्वाचन आयोग",0,1,'C');
 //$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 $pdf->Image('0.jpg',48,52,17,24);
-$pdf->Image('nvsp.png',139,52,23,24);
+$pdf->Image('nvsp.png',138,52,23,24);
 
 $pdf->SetXY(48, 50);
 $pdf->SetFont('freesans','',14);
-$pdf->Write(69, "मतदाता फोटो पहचान पत्र", '', 0, 'L', true, 0, false, false, 0);
+$pdf->Write(69, "              फोटो पहचान पत्र्र", '', 0, 'L', true, 0, false, false, 0);
 
 $pdf->SetXY(55, 50);
 $pdf->SetFont('Helvetica','',11.5);
-$pdf->Write(69, "ELECTOR PHOTO IDENTITY CARD", '', 0, 'C', true, 0, false, false, 0);
+$pdf->Write(69, "PHOTO IDENTITY CARD    ", '', 0, 'C', true, 0, false, false, 0);
 
 $pdf->Image($img,83,94,40,43);
 

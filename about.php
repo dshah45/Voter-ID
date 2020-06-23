@@ -21,16 +21,10 @@
   </head>
  <body>
      <?php include("amaterasu.php"); ?>
-<section class="page_breadcrumbs ds black parallax section_padding_top_100 section_padding_bottom_100">
-    <div class="container">
-      <div class="row">
         <div class="col-sm-12 text-center">
           <h2>About Us</h2>
-          
-        </div>
-      </div>
     </div>
-  </section>
+ 
 
 
 <section class="ls columns_margin_bottom_30">

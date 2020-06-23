@@ -10,7 +10,7 @@
   $_SESSION['success'] = "";
 
   // connect to database
-      $db = mysqli_connect('127.0.0.1:49489', 'azure', '6#vWHD_$', 'adhaar');
+      $db = mysqli_connect('127.0.0.1:50131', 'azure', '6#vWHD_$', 'adhaar');
 ?>
 
 
@@ -71,9 +71,9 @@ h5{
         <div class="card" style="width:600px">
          <h5>भारत निर्वाचन आयोग</h5>
          <center>
-         <p><img src="0.jpg" alt="logo" align="left" class="image1" style="width:12%";> <b>ELECTION COMMISSION OF INDIA</b> &nbsp;&nbsp;<img src="1.jpg" alt="logo1" align="right" class="imag3"></p>
+         <p><img src="0.jpg" alt="logo" align="left" class="image1" style="width:12%";> <b>ELECTION COMMISSION</b> &nbsp;&nbsp;<img src="nvsp.jpg" alt="logo1" align="right" class="imag3"></p>
          </center>
-         <p style="text-align: center; font-size: 14px; margin-bottom: 3px;"><b>मतदाता फोटो पहचान पत्र</b>&nbsp;&nbsp;<b>ELECTOR PHOTO IDENTITY CARD&nbsp;&nbsp;</b></p>
+         <p style="text-align: center; font-size: 14px; margin-bottom: 3px;"><b>फोटो पहचान पत्र</b>&nbsp;&nbsp;<b>PHOTO IDENTITY CARD&nbsp;&nbsp;</b></p>
         
           <div class="card-body">
             

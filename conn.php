@@ -1,5 +1,5 @@
 <?php
-$servername='127.0.0.1:49489';
+$servername='127.0.0.1:50131';
 $username='azure';
 $password='6#vWHD_$';
 $dbname='adhaar';

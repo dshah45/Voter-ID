@@ -2,7 +2,7 @@
 $errors = array(); 
  $_SESSION['success'] = "";
   // connect to database
-$db = mysqli_connect('127.0.0.1:49489', 'azure', '6#vWHD_$', 'adhaar'); 
+$db = mysqli_connect('127.0.0.1:50131', 'azure', '6#vWHD_$', 'adhaar'); 
 ?>
 <?php 
 	session_start(); 
@@ -91,7 +91,7 @@ echo "</tr>";
         $date2 = date_create("31st december");
 			date_sub($date2,date_interval_create_from_date_string("1 year"));
 
-				if (strtotime(date("j F Y")) > strtotime(date_format($date2,"Y-m-d")) and strtotime(date("j F Y")) < strtotime("31st May"))
+				if (strtotime(date("j F Y")) > strtotime(date_format($date2,"Y-m-d")) and strtotime(date("j F Y")) < strtotime("30th June"))
 				{ ?>
 					<input type="button"  class="btn" value="Send Mail" onclick="window.location.href='sendemail.php'" />';
 					<?php

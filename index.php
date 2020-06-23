@@ -118,7 +118,7 @@ width : 75px;
     <div class="w3-col m6">
       <h3>Know How to Apply?</h3>
       <p>Click on below link  to view the Registration Process.</p>
-      <p><a href= "user manual.pdf" class="w3-button w3-black"><i class="fa fa-question-circle"> </i> View Sample</a></p>
+      <p><a href= "manual.pdf" class="w3-button w3-black"><i class="fa fa-question-circle"> </i> View Sample</a></p>
     </div>
     <div class="w3-col m6">
       <img class="w3-image w3-round-large" src="img.jpg" alt="Buildings">
