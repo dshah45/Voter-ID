@@ -10,7 +10,7 @@
   $_SESSION['success'] = "";
 
   // connect to database
-      $db = mysqli_connect('127.0.0.1:50131', 'azure', '6#vWHD_$', 'adhaar');
+      $db = mysqli_connect('127.0.0.1:50510', 'azure', '6#vWHD_$', 'adhaar');
 ?>
 
 
@@ -90,7 +90,18 @@ h5{
             $fileext = explode('.', $filename);
             $filecheck = strtolower(end($fileext));
             $fileextstored = array('png', 'jpg', 'jpeg');
-
+             include "php-facedetection-master/FaceDetector.php";
+            $detector = new svay\FaceDetector('detection.dat');
+            $hello = $detector->faceDetect($folder);
+            //$hello = $detector->toJpeg();
+            if($hello == 0)
+            {
+            ?>
+            <script> alert("Please Select proper Image"); </script>
+            <?php
+            }
+            else
+            {
             if(in_array($filecheck, $fileextstored))
             {
                 //$file = addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
@@ -113,6 +124,7 @@ h5{
                 }*/ 
             }
            }
+          }
           $result1 = mysqli_query($db,"SELECT imgname FROM adhaardetail WHERE Adhaarno = '".$_SESSION['varr']."' "); 
           while($row = mysqli_fetch_array($result1))  
           {  
@@ -190,16 +202,16 @@ h5{
 
 <?php
 
-      $result = mysqli_query($db,"SELECT Age FROM adhaardetail WHERE Adhaarno = '".$_SESSION['varr']."' ");
+      /*$result = mysqli_query($db,"SELECT Age FROM adhaardetail WHERE Adhaarno = '".$_SESSION['varr']."' ");
       $num=mysqli_fetch_array($result);
 
      $adharcardnumber = $num['Age'];
       if($adharcardnumber < 18)
       {
           echo "You are still not eligible for voting";
-      }
+      }*/
 
-      $result2 = mysqli_query($db,"SELECT id,Name,Fname,Adhaarno,Mobileno,DOB,Sex,Age,Address FROM adhaardetail WHERE Adhaarno = '".$_SESSION['varr']."' ");
+      $result2 = mysqli_query($db,"SELECT * FROM adhaardetail WHERE Adhaarno = '".$_SESSION['varr']."' ");
 
       while($row=mysqli_fetch_array($result2)){
 
@@ -207,7 +219,7 @@ h5{
           <table>
     
     <tr>
-      <th width="30%">ELECTOR'S NAME : </th>
+      <th>ELECTOR'S NAME: </th>
       <td><?php echo strtoupper($row["Name"]); ?></td>
     </tr>
     <tr>
@@ -234,7 +246,7 @@ h5{
 
  </div>
     <p> <center><a class="d" href="pdftry.php" download style="color: red;">Download PDF</a></center> 
-     <a href="index.php?logout='1'" style="color: red;text-align: center;">Logout</a></p>
+     <a href="login.php?logout='1'" style="color: red;text-align: center;">Logout</a></p>
     
   </div>
   </div>
