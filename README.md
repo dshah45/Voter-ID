@@ -1,5 +1,4 @@
 # Voter-ID
-![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=dshah45&repo=Voter-ID)
 
 This Project helps the user to create their Voter-Id without Manual Process. The basic idea behind this is to have a Adhaar Number Linked with your Email-id and Mobile number so that the user can be Validated.
 
